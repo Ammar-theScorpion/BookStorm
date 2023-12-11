@@ -1,5 +1,7 @@
 package com.equiptal.BookShelf;
 
+import java.util.List;
+
 import com.equiptal.BookCURD.BookCURDInterface;
 
 /*
@@ -16,8 +18,8 @@ public class BookStore {
         bookCURD.store(book);
     }
 
-    public void displayAllBooks() {
-        bookDisplayer.displayAllBooks(bookCURD.getAllBooks());
+    public List<Book> displayAllBooks() {
+        return bookCURD.getAllBooks();
     }
 
     public void displayBook(Book book) {

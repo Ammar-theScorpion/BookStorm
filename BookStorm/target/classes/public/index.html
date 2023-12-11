@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/input.css">
+    <link rel="stylesheet" type="text/css" href="/css/toggle.css">
+</head>
+
+<body>
+    <header>
+		<div class="container">
+                <h1 class="text-center"> BookStore </h1>
+                <br>
+				<p class="text-center">customize your library</p>
+		</div>
+	</header>
+
+    <section id="main">
+    <h2>Make reservation:</h2>
+    <span>select storage type</span>
+    <div style="display: flex; flex-direction: row; ">
+        <div class="inputBox">
+            <select name="type" id="type">
+                <option value="memory">Memory</option>
+                <option value="file">File</option>
+            </select>
+        </div>
+
+        <button  style="margin-left: 30%;" id="addBook"> add Book </button>
+    </div>
+
+    <div>
+        <div class="inputBox">
+            <input required="required" type="number"  id="search" placeholder="dd">
+            <span>search by ISBN</span>
+            
+        </div>
+        <div class="inputBox">
+            <input required="required" type="number"  id="delete" placeholder="dd">
+            <span>delete by ISBN</span>
+        </div>
+        <button style="margin-top: 15px;" id="getBooks"> get All Books </button>
+    </div>
+
+    </section>
+        
+
+    <section>
+        <div id="toggle">
+            <div class="custom-toggle">
+                
+                <div class="inputBox">
+                    <input required="required" type="number" class="form-control" id="bookISBN" placeholder="Enter name">
+                    <span>ISBN</span>
+                </div>
+
+                <div class="inputBox">
+                    <input required="required" type="text" class="form-control" id="bookTitle" placeholder="Enter name">
+                    <span>Title</span>
+                </div>
+
+                <div class="inputBox">
+                    <input required="required" type="text" class="form-control" id="bookAuthor" placeholder="Enter name">
+                    <span>Auther</span>
+                </div>
+
+                <div class="inputBox">
+                    <input required="required" type="number" class="form-control" id="bookPrice" placeholder="Enter name">
+                    <span>Price</span>
+                </div>
+            </div>
+            <div class="custom-toggle">
+                <button style="margin-top: 15px;" id="add"> add </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="result">
+    </section>
+</body>
+    <script  src="/js/index.js"> </script>
+</html>

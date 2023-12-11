@@ -54,7 +54,7 @@ public class BookCURDFile implements BookCURDInterface {
         } catch (Exception e) {
             return null;
         }
-        return null;
+        return new Book();
     }
 
     @Override

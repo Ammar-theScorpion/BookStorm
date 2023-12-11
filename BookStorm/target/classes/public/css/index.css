@@ -1,0 +1,49 @@
+header {
+    background-color: #212529;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.1em;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+section#main {
+    position: relative;
+    top: 200px;
+    margin: 15px 20px;
+    
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: #2980b9;
+    }
+}
+
+
+#result {
+    position: absolute;
+    bottom: 0;
+    scroll-behavior: smooth;
+    padding: 20px;
+    margin-bottom: 2%;
+    width: 100%;
+    z-index: 50;
+}

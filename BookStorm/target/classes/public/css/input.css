@@ -1,0 +1,88 @@
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+  input, select {
+    width: 30%;
+    padding: 0.75em;
+    margin:0;
+    box-sizing: border-box;
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-color: transparent;
+    &::-webkit-input-placeholder {
+      color:transparent;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 4px -2px rgba(0, 0, 0, 1);
+      outline: none;
+    }
+    &:valid {
+        border-color: #3498db;
+    }
+    &:not(:placeholder-shown):not(:valid) {
+        border-color: red;
+    }
+}
+
+input:not(:placeholder-shown) ~ label {
+    top:-2em;
+    left:5em;
+  }
+  select:focus + label{
+      top: -2.0em;
+      left: 4em;
+      font-size: 85%;
+      color: #3498db; /* Adjust the color as needed */
+  }
+
+  select{
+    width: 100%;
+    color: gray;
+    transition: 0.5s;
+  }
+
+.inputBox{
+  position: relative;
+  width: 250px;
+  margin-top: 10px;
+}
+.inputBox input{
+  width: 100%;
+  padding: 10px;
+
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  font-size: 1em;
+  color: gray;
+  transition: 0.5s;
+}
+
+.inputBox span.date{
+  background-color: #f7f7f7;
+  margin: 5px;
+  padding: 5px;
+  width: 50%;
+
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+  color: #3498db;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.80em;
+  padding: 0 10px;
+  background-color: #f7f7f7;
+  border-left: 1px solid #3498db;
+  border-right: 1px solid #3498db;
+}
+
+.inputBox input:valid ~ span.date,
+.inputBox input:focus ~ span.date{
+  font-size: 0.80em;
+}
