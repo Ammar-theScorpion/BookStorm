@@ -5,8 +5,11 @@ import java.util.List;
 import com.equiptal.BookShelf.Book;
 import com.equiptal.BookShelf.BookStore;
 
+import jakarta.inject.Inject;
+
 public class BookUI {
 
+    @Inject
     public BookUI(BookStore bookStore) {
         this.bookStore = bookStore;
 

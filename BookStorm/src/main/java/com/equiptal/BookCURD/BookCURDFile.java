@@ -14,8 +14,8 @@ import com.equiptal.BookShelf.Book;
 
 public class BookCURDFile implements BookCURDInterface {
 
-    public BookCURDFile(String filePath) {
-        this.filePath = filePath;
+    public BookCURDFile() {
+        this.filePath = "test.txt";
         try {
             File file = new File(this.filePath);
             if (!file.exists())

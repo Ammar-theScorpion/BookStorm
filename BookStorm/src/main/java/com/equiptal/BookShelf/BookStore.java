@@ -4,10 +4,13 @@ import java.util.List;
 
 import com.equiptal.BookCURD.BookCURDInterface;
 
+import jakarta.inject.Inject;
+
 /*
     Main class; has access to all operations 
 */
 public class BookStore {
+    @Inject
 
     public BookStore(BookDisplayer bookDisplayer, BookCURDInterface bookCURD) {
         this.bookDisplayer = bookDisplayer;

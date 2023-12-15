@@ -7,4 +7,5 @@ com/equiptal/Response/Response.class
 com/equiptal/BookUIX/BookUI.class
 com/equiptal/BookCURD/BookCURDDatabase.class
 com/equiptal/BookShelf/BookDisplayer.class
+com/equiptal/Module/AppModule.class
 com/equiptal/BookCURD/BookCURDFile.class

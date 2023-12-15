@@ -1,25 +1,28 @@
 package com.equiptal;
 
-import com.equiptal.BookCURD.BookCURD;
-import com.equiptal.BookCURD.BookCURDDatabase;
-import com.equiptal.BookCURD.BookCURDFile;
-import com.equiptal.BookCURD.BookCURDInterface;
 import com.equiptal.BookShelf.Book;
-import com.equiptal.BookShelf.BookDisplayer;
-import com.equiptal.BookShelf.BookStore;
 import com.equiptal.BookUIX.BookUI;
+import com.equiptal.Module.AppModule;
 import com.equiptal.Response.Response;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 public class App {
 
-   private static void init(String type){
+   private static void init(String type) {
+
+        Injector injector = Guice.createInjector(new AppModule(type));
+        bookUI = injector.getInstance(BookUI.class); 
+
+        /*
         BookDisplayer bookDisplayer = new BookDisplayer();
-        BookCURDInterface bookCURD = storageType(type);
-        BookStore bookStore = new BookStore(bookDisplayer, bookCURD);
-        bookUI = new BookUI(bookStore);
-   }
+            BookCURDInterface bookCURD = storageType(type);
+            BookStore bookStore = new BookStore(bookDisplayer, bookCURD);
+            bookUI = new BookUI(bookStore);
+         */
+    }
 
     public static void main(String[] args) {
         init("memory");
@@ -28,7 +31,6 @@ public class App {
 
         }).start(8080);
         app.get("/type/{tp}", ctx -> {
-            System.err.println(ctx.pathParam("tp"));
             init(ctx.pathParam("tp"));
             ctx.result("type added");
         });
@@ -60,15 +62,6 @@ public class App {
         });
     }
 
-    private static BookCURDInterface storageType(String type) {
-        if(type.equals("file"))
-            return new BookCURDFile("test.txt");
-            
-        if(type.equals("database"))
-            return new BookCURDDatabase();
-        return new BookCURD();
-
-    }
-
+ 
     private static BookUI bookUI;
 }
