@@ -132,7 +132,7 @@ $(document).ready(function(){
     return `
         <p><strong>ISBN:</strong> ${data.isbn}
         <strong>Title:</strong> ${data.title}
-        <strong>Author:</strong> ${data.auther}
+        <strong>Author:</strong> ${data.author}
         <strong>Price:</strong> ${data.price}</p>
     `;
 

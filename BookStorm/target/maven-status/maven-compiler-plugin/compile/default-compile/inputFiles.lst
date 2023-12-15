@@ -1,4 +1,5 @@
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookShelf/Book.java
+/home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookCURD/BookCURDDatabase.java
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookCURD/BookCURDFile.java
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookUIX/BookUI.java
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookShelf/BookDisplayer.java
@@ -6,3 +7,4 @@
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookShelf/BookStore.java
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookCURD/BookCURD.java
 /home/ammat/Java/BookStorm/src/main/java/com/equiptal/BookCURD/BookCURDInterface.java
+/home/ammat/Java/BookStorm/src/main/java/com/equiptal/Response/Response.java

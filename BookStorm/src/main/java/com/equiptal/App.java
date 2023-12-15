@@ -1,6 +1,7 @@
 package com.equiptal;
 
 import com.equiptal.BookCURD.BookCURD;
+import com.equiptal.BookCURD.BookCURDDatabase;
 import com.equiptal.BookCURD.BookCURDFile;
 import com.equiptal.BookCURD.BookCURDInterface;
 import com.equiptal.BookShelf.Book;
@@ -49,7 +50,6 @@ public class App {
         });
 
         app.post("/add", ctx->{
-            System.err.println(ctx.formParam("isbn")+ ctx.formParam("title")+ ctx.formParam("author")+ Double.parseDouble(ctx.formParam("price")));
             bookUI.processBookInput(ctx.formParam("isbn"), ctx.formParam("title"), ctx.formParam("author"), Double.parseDouble(ctx.formParam("price")));
             ctx.status(201).json(new Response(true, "added"));
         });
@@ -63,6 +63,9 @@ public class App {
     private static BookCURDInterface storageType(String type) {
         if(type.equals("file"))
             return new BookCURDFile("test.txt");
+            
+        if(type.equals("database"))
+            return new BookCURDDatabase();
         return new BookCURD();
 
     }

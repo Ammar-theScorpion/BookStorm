@@ -7,10 +7,10 @@ public class Book implements Serializable {
     public Book() {
     }
 
-    public Book(String isbn, String title, String auther, double price) {
+    public Book(String isbn, String title, String author, double price) {
         this.ISBN = isbn;
         this.Title = title;
-        this.Auther = auther;
+        this.Author = author;
         this.Price = price;
     }
 
@@ -30,12 +30,12 @@ public class Book implements Serializable {
         this.Title = Title;
     }
 
-    public String getAuther() {
-        return this.Auther;
+    public String getAuthor() {
+        return this.Author;
     }
 
-    public void setAuther(String Auther) {
-        this.Auther = Auther;
+    public void setAuthor(String Auther) {
+        this.Author = Auther;
     }
 
     public double getPrice() {
@@ -48,12 +48,12 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return "ISBN--> " + ISBN + ", Title--> " + Title + ", Auther--> " + Auther + ", Price--> " + Price;
+        return "ISBN--> " + ISBN + ", Title--> " + Title + ", Auther--> " + Author + ", Price--> " + Price;
     }
 
     private String ISBN;
     private String Title;
-    private String Auther;
+    private String Author;
     private double Price;
     private static final long serialVersionUID = 1L;
 }

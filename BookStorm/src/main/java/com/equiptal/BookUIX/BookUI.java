@@ -12,10 +12,8 @@ public class BookUI {
 
     }
 
-
-
-    public void processBookInput(String isbn, String title, String auther, double price) {
-        bookStore.store(new Book(isbn, title, auther, price));
+    public void processBookInput(String isbn, String title, String author, double price) {
+        bookStore.store(new Book(isbn, title, author, price));
     }
 
     public Book processSearch(String isbn) {
