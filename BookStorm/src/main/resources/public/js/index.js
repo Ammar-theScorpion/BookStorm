@@ -24,7 +24,7 @@ $(document).ready(function(){
             },
         }).then(response =>{
             if (response.ok){
-                return response.json();
+                return response;
             }console.log(response.message())
         }).then(data=>{
             console.log(data);

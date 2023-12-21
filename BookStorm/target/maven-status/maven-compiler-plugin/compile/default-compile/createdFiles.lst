@@ -1,6 +1,5 @@
 com/equiptal/BookCURD/BookCURD.class
 com/equiptal/BookShelf/BookStore.class
-com/equiptal/App.class
 com/equiptal/BookShelf/Book.class
 com/equiptal/BookCURD/BookCURDInterface.class
 com/equiptal/Response/Response.class

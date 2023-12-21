@@ -47,10 +47,12 @@
     <scope>provided</scope>
 </dependency>
 
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.13.0</version> <!-- Check for the latest version on https://github.com/FasterXML/jackson-databind -->
+    <artifactId>jackson-core</artifactId>
+    <version>2.16.0</version>
 </dependency>
 
 
@@ -74,12 +76,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>com.mydataharbor</groupId>
-			<artifactId>jdbc-oracle-plugin</artifactId>
-			<version>2.0.2</version>
-			<type>pom</type>
-		</dependency>
+ 
 
   <dependency>
       <groupId>com.google.inject</groupId>
@@ -87,8 +84,21 @@
       <version>7.0.0</version>
   </dependency>
 
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.1</version>
+</dependency>
 
   </dependencies>
 
+    <properties>
+        <flyway.user>postgres</flyway.user>
+        <flyway.password>1234</flyway.password>
 
+        <!-- List are defined as comma-separated values -->
+        <flyway.schemas>postgres</flyway.schemas>
+
+        <flyway.url>jdbc:postgresql://localhost:5432/postgres</flyway.url>
+    </properties>
 </project>

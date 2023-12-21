@@ -9,17 +9,11 @@ import com.equiptal.BookShelf.Book;
 public class BookCURDDatabase implements BookCURDInterface{
 
     public BookCURDDatabase(){
-        String path = "jdbc:oracle:thin:@//localhost:1521/orcl";
-        
-        String name ="system";
-        String pass="!!hkhulhvuhwd";
+        final String path = "jdbc:postgresql://localhost:5432/postgres";
+        final String name = "postgres";
+        final String pass = "1234";
 
         jdbi = Jdbi.create(path, name, pass);
-        try{
-            jdbi.useHandle(handle ->handle.execute("BEGIN EXECUTE IMMEDIATE 'CREATE TABLE Book (isbn VARCHAR2(10) PRIMARY KEY, title VARCHAR2(30), author VARCHAR2(30), price NUMBER)'; EXCEPTION WHEN OTHERS THEN IF SQLCODE != -942 THEN RAISE; END IF; END;"));
-        }catch(Exception e){
-            System.err.println(e);
-        }
     } 
 
     @Override

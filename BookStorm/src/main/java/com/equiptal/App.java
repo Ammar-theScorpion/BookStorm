@@ -1,5 +1,6 @@
 package com.equiptal;
 
+
 import com.equiptal.BookShelf.Book;
 import com.equiptal.BookUIX.BookUI;
 import com.equiptal.Module.AppModule;
@@ -25,6 +26,8 @@ public class App {
     }
 
     public static void main(String[] args) {
+ 
+        
         init("memory");
         Javalin app = Javalin.create(config -> {
             config.staticFiles.add("/public", Location.CLASSPATH);
@@ -57,9 +60,10 @@ public class App {
         });
 
         app.get("/all", ctx ->{
-            System.err.println(bookUI.processDisplayAll());
             ctx.json(bookUI.processDisplayAll());
         });
+
+
     }
 
  
